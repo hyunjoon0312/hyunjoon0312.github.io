@@ -5,7 +5,7 @@ toc: true
 toc_sticky: true
 
 categories:
-  - Blog
+  - Algorithm
 tags:
   - Blog
 last_modified_at: 2022-05-12T11:57:00-05:00
