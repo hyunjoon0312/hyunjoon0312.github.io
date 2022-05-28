@@ -12,6 +12,8 @@ main:
     url: /linux/  
   - title: "Algorithm"
     url: /algorithm/
+  - title: "Blog"
+    url: /blog/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
