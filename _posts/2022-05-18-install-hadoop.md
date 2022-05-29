@@ -21,20 +21,19 @@ HDFS와 YARN에 대한 개념적 내용이 궁금하신 분은 아래 링크를 
 
 
 [1. HDFS란 무엇인가?](https://onestep-log.com/hadoop/hdfs/)  
-
-[2. YARN이란 무엇인가?](https://onestep-log.com/hadoop/yarn/)
+[2. YARN이란 무엇인가?](https://onestep-log.com/hadoop/yarn/)  
 
 
 
 ## 설치 전 참고 사항
-
-이번 포스팅의 OS 기준은 **Ubuntu를 기준**으로 작성하였습니다. Ununtu나 CentOS나 패키지 설치를 제외하고는 거의 비슷하니 CentOS를 사용하시는 분들도 어려움은 없으실 것이라 판단됩니다. 그리고 하둡 클러스터를 설치 전에 정말 중요한 부분이 **Apache Zookeeper가 먼저 선행되어 설치가 되어 있어야 한다는 것**입니다. ” HDFS란 무엇인가? ” 포스팅에서 얘기하였듯 하둡 클러스터의 Namenode가 HA(High Availability) 구성이 되기 위해서는 Zookeeper가 필수 이기 때문입니다. 따라서 우선 Zookeeper가 설치되어 있다는 가정하에 하둡 설치 방법에 대해 이야기하도록 하겠습니다. Zookeeper에 대한 개념과 설치 방법은 바로 다음 포스팅에 준비할 예정이니 작성되는데로 링크를 추가하도록 하겠습니다.
+이번 포스팅의 OS 기준은 **Ubuntu를 기준**으로 작성하였습니다. Ununtu나 CentOS나 패키지 설치를 제외하고는 거의 비슷하니 CentOS를 사용하시는 분들도 어려움은 없으실 것이라 판단됩니다. 그리고 하둡 클러스터를 설치 전에 정말 중요한 부분이 **Apache Zookeeper가 먼저 선행되어 설치가 되어 있어야 한다는 것**입니다.   
+"HDFS란 무엇인가?" 포스팅에서 얘기하였듯 하둡 클러스터의 Namenode가 HA(High Availability) 구성이 되기 위해서는 Zookeeper가 필수 이기 때문입니다. 따라서 우선 Zookeeper가 설치되어 있다는 가정하에 하둡 설치 방법에 대해 이야기하도록 하겠습니다.   
+Zookeeper에 대한 개념과 설치 방법은 바로 다음 포스팅에 준비할 예정이니 작성되는데로 링크를 추가하도록 하겠습니다.  
 
 
 
 ## 사전 작업
-
-하둡 Java로 짜여진 프로그램으로, Java Virtual Machine으로 실행되기 때문에 반드시 먼저 JDK가 설치되어 있어야 합니다. 현재 Oracle Java는 유료화 되었기 때문에 OpenJDK를 사용하여 설치해줍니다. 버전으로는 OpenJDK 1.8.0_252 이상 버전을 추천드리며 1.8.0의 최신 버전을 설치하셔도 관계 없습니다. 간혹 JDK 버전 호환성 문제로 Namenode나 Datanode 데몬이 실행이 되지 않는 경우가 있는데 이럴 때는 다른 버전의 OpenJDK를 설치해보시길 추천 드립니다. 참고로 포스팅 하는 시점의 OpenJDK1.8.0 가장 최신 버전은 OpenJDK 1.8.0_292 버전 입니다. 사전 작업은 **클러스터로 구성할 모든 장비에 진행**을 해줘야 합니다.
+하둡 Java로 짜여진 프로그램으로, Java Virtual Machine으로 실행되기 때문에 반드시 먼저 JDK가 설치되어 있어야 합니다. 현재 Oracle Java는 유료화 되었기 때문에 OpenJDK를 사용하여 설치해줍니다. 버전으로는 OpenJDK 1.8.0_252 이상 버전을 추천드리며 1.8.0의 최신 버전을 설치하셔도 관계 없습니다. 간혹 JDK 버전 호환성 문제로 Namenode나 Datanode 데몬이 실행이 되지 않는 경우가 있는데 이럴 때는 다른 버전의 OpenJDK를 설치해보시길 추천 드립니다. 참고로 포스팅 하는 시점의 OpenJDK1.8.0 가장 최신 버전은 OpenJDK 1.8.0_292 버전 입니다. 사전 작업은 **클러스터로 구성할 모든 장비에 진행**을 해줘야 합니다.  
 
 
 
@@ -162,7 +161,7 @@ export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
 
 HDFS와 YARN에 관련된 모든 환경 설정 파일들은 ~/hadoop-3.2.2/etc/hadoop 디렉터리에 위치해 있습니다. 
 
-```markup
+```bash
 ### hadoop-env.sh
 
 export HADOOP_HOME=/opt/hadoop-3.2.2
@@ -326,5 +325,4 @@ jps
 
 
 ## 마치며
-
 이렇게 이번 포스팅에서는 Apache Hadoop을 설치하는 방법에 대해서 알아보았습니다. 환경 설정 파일이 길어서 복잡해 보이실 수 있지만 차분히 보시면 그리 복잡하지 않아 모두 구성하실 수 있으실 것으로 생각됩니다. 혹시 제가 작성한 문서에 오타나 오류가 있다면 언제든 댓글로 제보 부탁드리겠습니다.

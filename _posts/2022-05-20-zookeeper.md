@@ -20,10 +20,10 @@ HDFS와 YARN의 Apache Hadoop 시리즈에 이어서 이번에는 Apache Zookeep
 
 
 
-[하둡 에코 시스템(Hadoop Eco System)이란?](https://onestep-log.com/hadoop/hadoop-eco/)
-[[HADOOP #1\] HDFS란 무엇인가?](https://onestep-log.com/hadoop/hdfs/)
-[[HADOOP #2\] YARN이란 무엇인가?](https://onestep-log.com/hadoop/yarn/)
-[[HADOOP #3\] Apache Hadoop 설치하기(3버전 기준)](https://onestep-log.com/hadoop/install-hadoop/)
+[하둡 에코 시스템(Hadoop Eco System)이란?](https://onestep-log.com/hadoop/hadoop-eco/)  
+[[HADOOP #1\] HDFS란 무엇인가?](https://onestep-log.com/hadoop/hdfs/)  
+[[HADOOP #2\] YARN이란 무엇인가?](https://onestep-log.com/hadoop/yarn/)  
+[[HADOOP #3\] Apache Hadoop 설치하기(3버전 기준)](https://onestep-log.com/hadoop/install-hadoop/)  
 
 
 
@@ -55,14 +55,14 @@ HDFS와 YARN의 Apache Hadoop 시리즈에 이어서 이번에는 Apache Zookeep
 
 ### 설치 파일 다운로드
 
-[**공식 홈페이지의 릴리즈 페이지**](https://zookeeper.apache.org/releases.html)에서 원하는 버전을 먼저 선택해주고, 아파치(Apache) 다운로드 페이지로 넘어가면 선택한 버전의 bin gzip 압축 파일을 다운로드 해줍니다. 저는 3.5.9 버전으로 선택하였습니다.
+[**공식 홈페이지의 릴리즈 페이지**](https://zookeeper.apache.org/releases.html)에서 원하는 버전을 먼저 선택해주고, 아파치(Apache) 다운로드 페이지로 넘어가면 선택한 버전의 bin gzip 압축 파일을 다운로드 해줍니다. 저는 3.5.9 버전으로 선택하였습니다.  
 
 ![Zookeeper Download](https://drive.google.com/uc?export=view&id=11MPJxR4WbDsSTfLeqPF3K8SMoGh30sA8)
 
 ![Zookeeper Releases](https://drive.google.com/uc?export=view&id=1webN03P8LERIEberk_O57geyuK0q0zg2)
 
-### 압축 해제 및 설치
 
+### 압축 해제 및 설치
 다운받은 bin gzip 파일의 압축을 풀어준 뒤 접근이 편리하도록 Symbolic link를 생성해 줍니다.
 
 ```bash
@@ -108,7 +108,7 @@ vi /data/zoo/data/myid
 
 주키퍼가 정상적으로 실행되었는지 확인하는 방법으로는 세가지가 있습니다.
 
-\1. 주키퍼의 Java Process가 실행되고 있는지 확인
+1. 주키퍼의 Java Process가 실행되고 있는지 확인
 
 ```bash
 jps
@@ -116,7 +116,7 @@ jps
 106991 Jps
 ```
 
-\2. netstat Tool을 이용하여 주키퍼 서버가 이용하는 포트(Port)가 열려있는지 확인
+2. netstat Tool을 이용하여 주키퍼 서버가 이용하는 포트(Port)가 열려있는지 확인
 
 ```bash
 netstat -naltop | grep -i listen
@@ -126,9 +126,9 @@ tcp6       0      0 192.168.75.201:3888     :::*                    LISTEN      
 tcp6       0      0 :::8080                 :::*                    LISTEN      106929/java      off (0.00/0/0)
 ```
 
-\### zookeeper port인 2181, 3888이 LISTEN 상태인지 확인
+### zookeeper port인 2181, 3888이 LISTEN 상태인지 확인
 
-\3. 주키퍼 CLI를 통한 확인
+3. 주키퍼 CLI를 통한 확인
 
 ```bash
 /opt/zoo/bin/zkCli.sh -server devlife-test-001:2181
