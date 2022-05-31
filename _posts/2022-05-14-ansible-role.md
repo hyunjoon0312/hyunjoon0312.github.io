@@ -6,7 +6,7 @@ toc_sticky: true
 toc_label: "목차"
 
 categories:
-  - OSS
+  - Ansible
 tags:
   - Ansible
 

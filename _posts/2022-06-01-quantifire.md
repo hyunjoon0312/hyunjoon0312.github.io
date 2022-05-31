@@ -6,9 +6,9 @@ toc_sticky: true
 toc_label: "목차"
 
 categories:
-  - Programming
-tags:
   - Python
+tags:
+  - 정규표현식
 ---
 
 <p>&nbsp;</p>
