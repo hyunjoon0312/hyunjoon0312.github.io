@@ -1,7 +1,7 @@
 ---
 title: "Programming"
 permalink: /programming/
-layout: category
+layout: tags
 autho_profile: true
 taxonomy: Programming
 ---
