@@ -1,5 +1,5 @@
 ---
-title:  "[HADOOP #4] HDFS ROUTER-BASED FEDERATION"
+title:  "[HADOOP #4] HDFS Router-Based Federation"
 excerpt: "Apache Hadoop 3버전에서 새롭게 도입된 기능인 HDFS Router Based Federation에 대한 설명"
 toc: true
 toc_sticky: true
