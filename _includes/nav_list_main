@@ -25,6 +25,13 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
+                    {% if category[0] == "Kafka" %}
+                        <li><a href="/categories/kafka" class="">Kafka ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
                     {% if category[0] == "Ansible" %}
                         <li><a href="/categories/ansible" class="">Ansible ({{category[1].size}})</a></li>
                     {% endif %}
