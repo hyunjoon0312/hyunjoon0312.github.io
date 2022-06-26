@@ -1,6 +1,6 @@
 ---
 title:  "[Kafka #1] Apache Kafka 기본 개념 알아보기"
-excerpt: "Apache Kafka에 대한 기본 개념 설명과 Apache Kafka를 설치하는 방법"
+excerpt: "Apache Kafka에 대한 기본 개념에 대한 설명"
 toc: true
 toc_sticky: true
 toc_label: "목차"

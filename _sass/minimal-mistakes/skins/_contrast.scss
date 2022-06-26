@@ -5,31 +5,87 @@
 /* Colors */
 $text-color: #000 !default;
 $muted-text-color: $text-color !default;
-$primary-color: #ff0000 !default;
+$primary-color: #878c8f !default;
 $border-color: mix(#fff, $text-color, 75%) !default;
 $footer-background-color: #000 !default;
-$link-color: #0000ff !default;
+$link-color: #5b97aa !default;
 $masthead-link-color: $text-color !default;
 $masthead-link-color-hover: $text-color !default;
 $navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
 
+
 /* contrast syntax highlighting (base16) */
-$base00: #000000 !default;
-$base01: #242422 !default;
-$base02: #484844 !default;
-$base03: #6c6c66 !default;
-$base04: #918f88 !default;
-$base05: #b5b3aa !default;
-$base06: #d9d7cc !default;
-$base07: #fdfbee !default;
-$base08: #ff6c60 !default;
-$base09: #e9c062 !default;
-$base0a: #ffffb6 !default;
-$base0b: #a8ff60 !default;
-$base0c: #c6c5fe !default;
-$base0d: #96cbfe !default;
-$base0e: #ff73fd !default;
-$base0f: #b18a3d !default;
+// $base00: #000000 !default;
+// $base01: #242422 !default;
+// $base02: #484844 !default;
+// $base03: #6c6c66 !default;
+// $base04: #918f88 !default;
+// $base05: #b5b3aa !default;
+// $base06: #d9d7cc !default;
+// $base07: #fdfbee !default;
+// $base08: #ff6c60 !default;
+// $base09: #e9c062 !default;
+// $base0a: #ffffb6 !default;
+// $base0b: #a8ff60 !default;
+// $base0c: #c6c5fe !default;
+// $base0d: #96cbfe !default;
+// $base0e: #ff73fd !default;
+// $base0f: #b18a3d !default;
+
+/* dirt syntax highlighting (base16) */
+$base00: #231e18 !default;
+$base01: #302b25 !default;
+$base02: #48413a !default;
+$base03: #9d8b70 !default;
+$base04: #b4a490 !default;
+$base05: #cabcb1 !default;
+$base06: #d7c8bc !default;
+$base07: #e4d4c8 !default;
+$base08: #d35c5c !default;
+$base09: #ca7f32 !default;
+$base0a: #e0ac16 !default;
+$base0b: #b7ba53 !default;
+$base0c: #6eb958 !default;
+$base0d: #88a4d3 !default;
+$base0e: #bb90e2 !default;
+$base0f: #b49368 !default;
+
+tt,
+code,
+kbd,
+samp,
+pre {
+  font-family: "Nanum Gothic";
+}
+
+
+pre {
+   overflow-x: auto; /* add scrollbars to wide code blocks*/
+ }
+ 
+ p > code,
+ a > code,
+ li > code,
+ figcaption > code,
+ td > code {
+   padding-top: 0.1rem;
+   padding-bottom: 0.1rem;
+   padding-left: 0.2rem;
+   padding-right: 0.1rem;
+   font-size: 1.1em;
+   background: #ebc2c2;
+   border-radius: 5px;
+   color: rgb(0, 0, 0);
+ 
+ 
+   &:before,
+   &:after {
+     letter-spacing: -0.1em;
+     content: "\00a0"; /* non-breaking space*/
+   }
+ }
+
+
 
 .page__content {
   .notice,
@@ -50,3 +106,5 @@ $base0f: #b18a3d !default;
 .page__footer-follow .social-icons .svg-inline--fa  {
   color: inherit;
 }
+
+
